@@ -10,3 +10,55 @@ h2{
     background-color: #5c464b;
     color: #f0cbad;
 }
+a{
+    color:aliceblue;
+}
+.horse{
+    color: red;
+    font-size: 40px;
+    font-family: fantasy;
+}
+.horse:hover{
+    animation: redchange 1s;
+}
+@keyframes redchange {
+    from{color: red;}
+    to{color: skyblue;}
+}
+.corn{
+    justify-content: center;
+    align-items: center;
+}
+.mandy p{
+    text-align: center; 
+    justify-content: center;
+}
+  /* Container for the image and tooltip */
+  .image-container {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+  }
+  
+  /* Tooltip styles */
+  .tooltip {
+    visibility: hidden;
+    width: 150px; /* Tooltip width */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 75%; /* Closer to the image */
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  /* Tooltip visible when hovering over the image */
+  .image-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
