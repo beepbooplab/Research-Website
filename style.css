@@ -13,6 +13,11 @@ h2{
 a{
     color:aliceblue;
 }
+img{
+    width: 100%;
+    height: auto;
+    max-width: 750px;
+}
 .horse{
     color: red;
     font-size: 40px;
@@ -25,23 +30,28 @@ a{
     from{color: red;}
     to{color: skyblue;}
 }
-.corn{
-    justify-content: center;
-    align-items: center;
-}
 .mandy p{
-    text-align: center; 
-    justify-content: center;
+    display: grid;
+    place-items: center; /* Centers content both horizontally and vertically */
 }
-  /* Container for the image and tooltip */
-  .image-container {
+
+/* Center the image wrapper */
+.image-wrapper {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically if height is set */
+}
+
+/* Container for the image and tooltip */
+.image-container {
     position: relative;
     display: inline-block;
-    margin: 20px;
-  }
-  
-  /* Tooltip styles */
-  .tooltip {
+    margin: 0; /* Removed margin to eliminate extra space */
+    padding: 0; /* Optional: Ensure no padding aorund the image container */
+}
+
+/* Tooltip styles */
+.tooltip {
     visibility: hidden;
     width: 150px; /* Tooltip width */
     background-color: rgba(0, 0, 0, 0.7);
@@ -51,14 +61,14 @@ a{
     padding: 5px;
     position: absolute;
     top: 50%;
-    left: 75%; /* Closer to the image */
-    transform: translateY(-50%);
+    left: 100%; /* Tooltip to the right of the image */
+    transform: translate(-50%); /* Vertically centers the tooltip */
     opacity: 0;
     transition: opacity 0.3s;
-  }
-  
-  /* Tooltip visible when hovering over the image */
-  .image-container:hover .tooltip {
+}
+
+/* Tooltip visible when hovering over the image */
+.image-container:hover .tooltip {
     visibility: visible;
     opacity: 1;
-  }
+}
